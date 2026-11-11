@@ -1,0 +1,23 @@
+{
+  "app": "npx tsx src/main.ts",
+  "watch": { "include": ["src/**"], "exclude": ["node_modules"] },
+  "context": {
+    "env": "dev",
+    "environments": {
+      "dev": {
+        "noncurrentVersionRetentionDays": 7,
+        "stagingRetentionDays": 7,
+        "snapshotInfrequentAccessAfterDays": 30,
+        "destroyOnDelete": true,
+        "tags": { "CostCenter": "hackathon" }
+      },
+      "demo": {
+        "noncurrentVersionRetentionDays": 30,
+        "stagingRetentionDays": 14,
+        "snapshotInfrequentAccessAfterDays": 30,
+        "destroyOnDelete": false,
+        "tags": { "CostCenter": "hackathon" }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "_fixture": {
+    "note": "Derived from the OpenAPI spec (api.awsevents.com/v1/openapi.json). Not live data. IDs, titles, tokens are invented.",
+    "provenance": "synthetic"
+  },
+  "items": [
+    {
+      "topics": ["Analytics"],
+      "services": ["AWS Lambda", "Amazon Kinesis"],
+      "abstract": "Synthetic abstract.",
+      "sessionId": "SYN-0005",
+      "title": "Synthetic: Serverless data pipelines",
+      "level": "100 - Foundational"
+    }
+  ],
+  "totalCount": 5
+}

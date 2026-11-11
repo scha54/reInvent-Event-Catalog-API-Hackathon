@@ -1,0 +1,251 @@
+name: CI/CD
+
+# PRs run checks plus `cdk synth` / `cdk diff`. Deploys run only from main and
+# require approval via GitHub Environments (`dev`, `demo`).
+# AWS access uses GitHub OIDC only; no static AWS keys are stored or used.
+#
+# Required configuration (Settings > Secrets and variables > Actions):
+#   Repository variables : AWS_REGION, AWS_DIFF_ROLE_ARN (read-only role for PR `cdk diff`, optional)
+#   Environment variables: AWS_DEPLOY_ROLE_ARN (per environment: dev, demo)
+#   Environment variables (optional): CDK_EVENT_ID, CDK_ALLOWED_ORIGINS, CDK_OPERATOR_PRINCIPALS, CDK_ALERT_EMAIL
+# Configure required reviewers on the `dev` and `demo` environments for approval gates.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment (deploys only run from main)'
+        type: choice
+        options: [dev, demo]
+        default: dev
+
+# Least privilege by default; jobs elevate only what they need.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-cd-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  NODE_VERSION: '22'
+  CDK_ENV: ${{ inputs.environment || 'dev' }}
+
+jobs:
+  quality:
+    name: Format, lint, typecheck, unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run format
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+
+  security:
+    name: Dependency and security scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Verify registry signatures and audit dependencies
+        run: |
+          npm audit signatures
+          npm audit --audit-level=high
+      - name: Dependency review (PRs)
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@v4.7.1
+        with:
+          fail-on-severity: high
+
+  cdk-synth:
+    name: CDK synth (${{ matrix.env }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        env: [dev, demo]
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build:web
+      - name: Synthesize
+        working-directory: infra/cdk
+        run: npx cdk synth --quiet -c env=${{ matrix.env }}
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: cdk-out-${{ matrix.env }}
+          path: infra/cdk/cdk.out
+          retention-days: 7
+
+  cdk-diff:
+    name: CDK diff (PR)
+    # Fork PRs get no OIDC token; skip them. Requires a read-only role variable.
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      vars.AWS_DIFF_ROLE_ARN != ''
+    needs: [quality]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build:web
+      - uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          role-to-assume: ${{ vars.AWS_DIFF_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+          role-session-name: gha-cdk-diff-${{ github.run_id }}
+      - name: Diff against dev
+        working-directory: infra/cdk
+        run: npx cdk diff -c env=dev
+
+  integration:
+    name: Integration tests
+    needs: [quality]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run test:integration
+
+  deploy:
+    name: Deploy (${{ inputs.environment || 'dev' }})
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs: [quality, security, cdk-synth, integration]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    # Environment protection rules (required reviewers) provide the approval gate.
+    environment:
+      name: ${{ inputs.environment || 'dev' }}
+    permissions:
+      id-token: write
+      contents: read
+    concurrency:
+      group: deploy-${{ inputs.environment || 'dev' }}
+      cancel-in-progress: false
+    outputs:
+      api_url: ${{ steps.outputs.outputs.api_url }}
+      web_url: ${{ steps.outputs.outputs.web_url }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build:web
+      - uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+          role-session-name: gha-deploy-${{ github.run_id }}
+      - name: Deploy stacks
+        working-directory: infra/cdk
+        env:
+          CDK_EVENT_ID: ${{ vars.CDK_EVENT_ID }}
+          CDK_ALLOWED_ORIGINS: ${{ vars.CDK_ALLOWED_ORIGINS }}
+          CDK_OPERATOR_PRINCIPALS: ${{ vars.CDK_OPERATOR_PRINCIPALS }}
+          CDK_ALERT_EMAIL: ${{ vars.CDK_ALERT_EMAIL }}
+        run: |
+          args=(-c "env=${CDK_ENV}")
+          [ -n "${CDK_EVENT_ID}" ] && args+=(-c "eventId=${CDK_EVENT_ID}")
+          [ -n "${CDK_ALLOWED_ORIGINS}" ] && args+=(-c "allowedOrigins=${CDK_ALLOWED_ORIGINS}")
+          [ -n "${CDK_OPERATOR_PRINCIPALS}" ] && args+=(-c "operatorPrincipals=${CDK_OPERATOR_PRINCIPALS}")
+          [ -n "${CDK_ALERT_EMAIL}" ] && args+=(-c "alertEmail=${CDK_ALERT_EMAIL}")
+          npx cdk deploy --all --require-approval never \
+            --outputs-file ../../cdk-outputs.json "${args[@]}"
+      - name: Export stack outputs
+        id: outputs
+        run: |
+          api_url=$(jq -r 'to_entries[] | select(.key | endswith("-Api")) | .value.ApiUrl // empty' cdk-outputs.json)
+          web_url=$(jq -r 'to_entries[] | select(.key | endswith("-Web")) | .value.WebUrl // empty' cdk-outputs.json)
+          echo "api_url=${api_url}" >> "$GITHUB_OUTPUT"
+          echo "web_url=${web_url}" >> "$GITHUB_OUTPUT"
+
+  smoke:
+    name: Smoke test
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check API and web respond
+        env:
+          API_URL: ${{ needs.deploy.outputs.api_url }}
+          WEB_URL: ${{ needs.deploy.outputs.web_url }}
+        run: |
+          test -n "${API_URL}" || { echo "API URL missing from stack outputs"; exit 1; }
+          test -n "${WEB_URL}" || { echo "Web URL missing from stack outputs"; exit 1; }
+          curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors \
+            "${API_URL%/}/api/v1/events" > /dev/null
+          curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors \
+            --head "${WEB_URL%/}/" > /dev/null
+          # Admin routes must reject unauthenticated callers.
+          code=$(curl --silent --output /dev/null --write-out '%{http_code}' -X POST \
+            "${API_URL%/}/api/v1/admin/events/smoke/sync")
+          case "${code}" in 401|403) ;; *) echo "Expected 401/403 on admin route, got ${code}"; exit 1 ;; esac
+
+  e2e:
+    name: End-to-end tests
+    needs: [deploy, smoke]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - name: Run end-to-end suite against deployed stack
+        env:
+          E2E_API_URL: ${{ needs.deploy.outputs.api_url }}
+          E2E_WEB_URL: ${{ needs.deploy.outputs.web_url }}
+        run: npm run test:e2e

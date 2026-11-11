@@ -1,0 +1,19 @@
+{
+  "name": "@serendipity/packages-evaluation",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "report": "tsx src/generate-report.ts"
+  },
+  "dependencies": {
+    "@serendipity/packages-contracts": "0.0.0",
+    "@serendipity/packages-discovery": "0.0.0"
+  },
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

@@ -1,0 +1,264 @@
+[
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-001",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Event-driven serverless applications with Lambda",
+    "abstract": "Design serverless applications with Lambda and EventBridge. Covers idempotency, cold start tuning and cost efficiency for event-driven workloads.",
+    "track": "Sample Compute",
+    "topics": [
+      "Serverless"
+    ],
+    "level": "300 - Advanced",
+    "format": "Breakout session",
+    "startsAt": "2026-12-01T09:00:00-08:00",
+    "endsAt": "2026-12-01T10:00:00-08:00",
+    "venue": "Sample Venue A, Room 101",
+    "sourceHash": "dd2a15e932f899c4c699b39699595fffa823d7fc4904e38c95405209c7e55a42",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Event-driven serverless applications with Lambda\nAbstract: Design serverless applications with Lambda and EventBridge. Covers idempotency, cold start tuning and cost efficiency for event-driven workloads.\nTags: Sample Compute; Serverless"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-002",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Serverless cost and energy efficiency at scale",
+    "abstract": "Right-size serverless functions and reduce idle capacity. Efficiency gains lower both spend and energy consumption for event-driven workloads.",
+    "track": "Sample Compute",
+    "topics": [
+      "Serverless",
+      "Cost optimization"
+    ],
+    "level": "200 - Intermediate",
+    "format": "Chalk talk",
+    "startsAt": "2026-12-01T10:30:00-08:00",
+    "endsAt": "2026-12-01T11:30:00-08:00",
+    "venue": "Sample Venue A, Room 102",
+    "sourceHash": "715382292111676a72eeaca1ea2e7e6dd2d9954dc6cde3c9748e97ef852ffd82",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Serverless cost and energy efficiency at scale\nAbstract: Right-size serverless functions and reduce idle capacity. Efficiency gains lower both spend and energy consumption for event-driven workloads.\nTags: Sample Compute; Serverless; Cost optimization"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-003",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Serverless patterns for asynchronous workflows",
+    "abstract": "Compose serverless workflows with Step Functions and queues. Retries, dead-letter handling and observability for asynchronous pipelines.",
+    "track": "Sample Compute",
+    "topics": [
+      "Serverless"
+    ],
+    "level": "300 - Advanced",
+    "format": "Workshop",
+    "startsAt": "2026-12-02T13:00:00-08:00",
+    "endsAt": "2026-12-02T15:00:00-08:00",
+    "venue": "Sample Venue B",
+    "sourceHash": "323dd50733100d9e848b82db48143c319a5ff7df5b9142da259c1729dbe28e99",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Serverless patterns for asynchronous workflows\nAbstract: Compose serverless workflows with Step Functions and queues. Retries, dead-letter handling and observability for asynchronous pipelines.\nTags: Sample Compute; Serverless"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-004",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Sustainability by design on the cloud",
+    "abstract": "Measure carbon footprint and improve energy efficiency. Sustainability patterns include rightsizing, idle capacity reduction and efficient scheduling.",
+    "track": "Sample Sustainability",
+    "topics": [
+      "Sustainability",
+      "Carbon"
+    ],
+    "level": "200 - Intermediate",
+    "format": "Breakout session",
+    "startsAt": "2026-12-01T10:30:00-08:00",
+    "endsAt": "2026-12-01T11:30:00-08:00",
+    "venue": "Sample Venue A, Room 201",
+    "sourceHash": "fc08d3632118aecb37f5cff9ae977da00c22797f29d1cf423335b1ccd3a04757",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Sustainability by design on the cloud\nAbstract: Measure carbon footprint and improve energy efficiency. Sustainability patterns include rightsizing, idle capacity reduction and efficient scheduling.\nTags: Sample Sustainability; Sustainability; Carbon"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-005",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Carbon-aware workload scheduling",
+    "abstract": "Shift batch workloads to low-carbon regions and times. Reduce energy consumption and idle capacity with efficient scheduling.",
+    "track": "Sample Sustainability",
+    "topics": [
+      "Sustainability",
+      "Carbon"
+    ],
+    "level": "300 - Advanced",
+    "format": "Chalk talk",
+    "startsAt": "2026-12-02T09:00:00-08:00",
+    "endsAt": "2026-12-02T10:00:00-08:00",
+    "venue": "Sample Venue B",
+    "sourceHash": "fde1198f4b48546260e352b3e83dd32afac911a971b9025484be6da03f07ae91",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Carbon-aware workload scheduling\nAbstract: Shift batch workloads to low-carbon regions and times. Reduce energy consumption and idle capacity with efficient scheduling.\nTags: Sample Sustainability; Sustainability; Carbon"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-006",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Measuring the footprint of event-driven systems",
+    "abstract": "Track energy and carbon metrics for event-driven systems. Compare managed and self-hosted options for sustainability reporting.",
+    "track": "Sample Sustainability",
+    "topics": [
+      "Sustainability"
+    ],
+    "level": "200 - Intermediate",
+    "format": "Lightning talk",
+    "sourceHash": "a7a96778de2d4713abdd87e7ca0e40a3b553f9635e61ec95099f9968243d0133",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Measuring the footprint of event-driven systems\nAbstract: Track energy and carbon metrics for event-driven systems. Compare managed and self-hosted options for sustainability reporting.\nTags: Sample Sustainability; Sustainability"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-007",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Threat detection with machine learning",
+    "abstract": "Apply AI and machine learning models to security telemetry for anomaly detection. Covers feature pipelines, model drift and alert triage.",
+    "track": "Sample Security",
+    "topics": [
+      "Security",
+      "Threat detection"
+    ],
+    "level": "300 - Advanced",
+    "format": "Breakout session",
+    "startsAt": "2026-12-03T09:00:00-08:00",
+    "endsAt": "2026-12-03T10:00:00-08:00",
+    "venue": "Sample Venue A, Room 301",
+    "sourceHash": "1ae4e3797b54dff5ac208643f0d1cda624369f2826ff1396ec275b39b15f34aa",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Threat detection with machine learning\nAbstract: Apply AI and machine learning models to security telemetry for anomaly detection. Covers feature pipelines, model drift and alert triage.\nTags: Sample Security; Security; Threat detection"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-008",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Securing generative AI applications",
+    "abstract": "Protect generative AI applications against prompt injection and data leakage. Security guardrails, anomaly detection and model access policies.",
+    "track": "Sample Security",
+    "topics": [
+      "Security",
+      "Generative AI"
+    ],
+    "level": "300 - Advanced",
+    "format": "Workshop",
+    "startsAt": "2026-12-03T09:30:00-08:00",
+    "endsAt": "2026-12-03T11:30:00-08:00",
+    "venue": "Sample Venue B",
+    "sourceHash": "e21d40e6a4d52b32440141c5607998d12dde7b444f9b9fc61bda1b5d80942909",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Securing generative AI applications\nAbstract: Protect generative AI applications against prompt injection and data leakage. Security guardrails, anomaly detection and model access policies.\nTags: Sample Security; Security; Generative AI"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-009",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Building generative AI agents",
+    "abstract": "Build AI agents with foundation models. Covers retrieval augmented generation, tool use and guardrails for agents.",
+    "track": "Sample AI",
+    "topics": [
+      "Generative AI",
+      "Agents"
+    ],
+    "level": "300 - Advanced",
+    "format": "Breakout session",
+    "startsAt": "2026-12-03T13:00:00-08:00",
+    "endsAt": "2026-12-03T14:00:00-08:00",
+    "venue": "Sample Venue A, Room 302",
+    "sourceHash": "763c102e42133a44018907b894a09799f5a3d1c35b92911676cea23fe9eca7b4",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Building generative AI agents\nAbstract: Build AI agents with foundation models. Covers retrieval augmented generation, tool use and guardrails for agents.\nTags: Sample AI; Generative AI; Agents"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-010",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Machine learning pipelines for anomaly detection",
+    "abstract": "Train and deploy machine learning pipelines that detect anomaly patterns in streaming telemetry. Feature pipelines and model drift monitoring for AI workloads.",
+    "track": "Sample AI",
+    "topics": [
+      "Machine learning",
+      "Anomaly detection"
+    ],
+    "level": "300 - Advanced",
+    "format": "Chalk talk",
+    "sourceHash": "08474434b2c62a49abde5af05626488f50493360b98e009f164da6c3fd391f00",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Machine learning pipelines for anomaly detection\nAbstract: Train and deploy machine learning pipelines that detect anomaly patterns in streaming telemetry. Feature pipelines and model drift monitoring for AI workloads.\nTags: Sample AI; Machine learning; Anomaly detection"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-011",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Identity and access management deep dive",
+    "abstract": "Least-privilege IAM policy design, permission boundaries and identity federation for large organizations.",
+    "track": "Sample Security",
+    "topics": [
+      "Security",
+      "IAM"
+    ],
+    "level": "400 - Expert",
+    "format": "Workshop",
+    "startsAt": "2026-12-04T10:00:00-08:00",
+    "endsAt": "2026-12-04T12:00:00-08:00",
+    "venue": "Sample Venue B",
+    "sourceHash": "58c905c3ddef146b3b50a25d4b46d5ca12ee77f8e866a6d16446904b6f3a8022",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Identity and access management deep dive\nAbstract: Least-privilege IAM policy design, permission boundaries and identity federation for large organizations.\nTags: Sample Security; Security; IAM"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-012",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Data lake governance and lineage",
+    "abstract": "Govern a data lake with fine-grained access, lineage tracking and data quality checks across analytics pipelines.",
+    "track": "Sample Analytics",
+    "topics": [
+      "Data lake",
+      "Governance"
+    ],
+    "level": "300 - Advanced",
+    "format": "Breakout session",
+    "sourceHash": "cd6e7459c9483c9c383284293fd655ff4b78969f6216e235dacf8c1eef4564b3",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Data lake governance and lineage\nAbstract: Govern a data lake with fine-grained access, lineage tracking and data quality checks across analytics pipelines.\nTags: Sample Analytics; Data lake; Governance"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-013",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Network architecture for multi-region resilience",
+    "abstract": "Design resilient multi-region networks with Transit Gateway. Failover, latency and traffic engineering.",
+    "track": "Sample Networking",
+    "topics": [
+      "Networking",
+      "Resilience"
+    ],
+    "level": "300 - Advanced",
+    "format": "Chalk talk",
+    "sourceHash": "be02129656d70787342801ff880f22650504e0497505dd0523a6923b4224c8f1",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Network architecture for multi-region resilience\nAbstract: Design resilient multi-region networks with Transit Gateway. Failover, latency and traffic engineering.\nTags: Sample Networking; Networking; Resilience"
+  },
+  {
+    "eventId": "sample-event",
+    "sessionId": "SAMPLE-014",
+    "catalogVersion": "offline-sample-20260101T000000000Z",
+    "title": "Sample: Edge computing for retail",
+    "abstract": "Run inference at the edge in retail stores. Latency, offline operation and fleet management for edge devices.",
+    "track": "Sample Edge",
+    "topics": [
+      "Edge",
+      "Retail"
+    ],
+    "level": "200 - Intermediate",
+    "format": "Lightning talk",
+    "sourceHash": "7d549a946503bfd68d77e3360f9477c9a5ee0ec2244f4e4eb68db91643b7baa0",
+    "ingestedAt": "2026-01-01T00:00:00.000Z",
+    "searchableText": "Title: Sample: Edge computing for retail\nAbstract: Run inference at the edge in retail stores. Latency, offline operation and fleet management for edge devices.\nTags: Sample Edge; Edge; Retail"
+  }
+]

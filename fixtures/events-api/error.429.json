@@ -1,0 +1,10 @@
+﻿{
+  "_fixture": {
+    "note": "Derived from the OpenAPI spec (api.awsevents.com/v1/openapi.json). Not live data. IDs, titles, tokens are invented.",
+    "provenance": "synthetic"
+  },
+  "message": "Synthetic throttling message",
+  "_headers": {
+    "Retry-After": "2"
+  }
+}

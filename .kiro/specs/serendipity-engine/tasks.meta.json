@@ -1,0 +1,639 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create the monorepo workspace": [
+      {
+        "executionId": "20cf6b83-0255-4e13-9003-1f388cfdf196",
+        "chatSessionId": "sess_530d2c67-cc38-44ee-90d7-934fcf0505c3",
+        "timestamp": 1794313622100
+      },
+      {
+        "executionId": "20cf6b83-0255-4e13-9003-1f388cfdf196",
+        "chatSessionId": "sess_530d2c67-cc38-44ee-90d7-934fcf0505c3",
+        "timestamp": 1794314047779
+      }
+    ],
+    "1.2 Define shared Zod schemas and types in `packages/contracts`": [
+      {
+        "executionId": "631a12af-2603-4aa9-8752-df7daf0da90f",
+        "chatSessionId": "sess_21abd412-0e00-4037-8b1b-a712f2ec4d14",
+        "timestamp": 1794314091611
+      },
+      {
+        "executionId": "631a12af-2603-4aa9-8752-df7daf0da90f",
+        "chatSessionId": "sess_21abd412-0e00-4037-8b1b-a712f2ec4d14",
+        "timestamp": 1794314246425
+      }
+    ],
+    "1.4 Implement the structured JSON logger with redaction": [
+      {
+        "executionId": "7f46562c-da31-4281-9f96-6afce6e52a05",
+        "chatSessionId": "sess_e2f2075b-8922-4ae8-beb8-b136ebc3c600",
+        "timestamp": 1794314277782
+      },
+      {
+        "executionId": "7f46562c-da31-4281-9f96-6afce6e52a05",
+        "chatSessionId": "sess_e2f2075b-8922-4ae8-beb8-b136ebc3c600",
+        "timestamp": 1794314380233
+      }
+    ],
+    "1. Scaffold the workspace and shared Zod contracts": [
+      {
+        "executionId": "7f46562c-da31-4281-9f96-6afce6e52a05",
+        "chatSessionId": "sess_e2f2075b-8922-4ae8-beb8-b136ebc3c600",
+        "timestamp": 1794314380389
+      }
+    ],
+    "2.1 Run the Events API spike and validate the OpenAPI spec": [
+      {
+        "executionId": "e2c6e38a-797d-417c-95d6-5076ec096143",
+        "chatSessionId": "sess_8f866f95-1c6c-48e5-89ce-17b0962ae089",
+        "timestamp": 1794314433828
+      },
+      {
+        "executionId": "030b9c0e-43d7-46a7-81d3-0c5d6b0f176e",
+        "chatSessionId": "sess_fd744fdf-19ab-498e-85a9-3655d16afed4",
+        "timestamp": 1794316776600
+      },
+      {
+        "executionId": "030b9c0e-43d7-46a7-81d3-0c5d6b0f176e",
+        "chatSessionId": "sess_fd744fdf-19ab-498e-85a9-3655d16afed4",
+        "timestamp": 1794317093038
+      }
+    ],
+    "2.2 Implement retry and backoff utility": [
+      {
+        "executionId": "0679db2a-3cf1-4521-9fde-206434f98979",
+        "chatSessionId": "sess_f23011d7-3117-4bf3-ab1a-c7208c6f23cd",
+        "timestamp": 1794317191900
+      },
+      {
+        "executionId": "0679db2a-3cf1-4521-9fde-206434f98979",
+        "chatSessionId": "sess_f23011d7-3117-4bf3-ab1a-c7208c6f23cd",
+        "timestamp": 1794317262052
+      }
+    ],
+    "2.4 Implement the Events API adapter with `nextToken` pagination": [
+      {
+        "executionId": "df56a10d-bb3b-4896-ae0d-b080faa84dbe",
+        "chatSessionId": "sess_7fa428d8-27eb-437b-954f-b9444d018626",
+        "timestamp": 1794317304653
+      },
+      {
+        "executionId": "df56a10d-bb3b-4896-ae0d-b080faa84dbe",
+        "chatSessionId": "sess_7fa428d8-27eb-437b-954f-b9444d018626",
+        "timestamp": 1794317599052
+      }
+    ],
+    "2. Events API adapter spike and adapter implementation": [
+      {
+        "executionId": "df56a10d-bb3b-4896-ae0d-b080faa84dbe",
+        "chatSessionId": "sess_7fa428d8-27eb-437b-954f-b9444d018626",
+        "timestamp": 1794317600450
+      }
+    ],
+    "3.1 Implement session normalization": [
+      {
+        "executionId": "dcef3d99-070d-4994-a120-a888f4d4ac57",
+        "chatSessionId": "sess_022eb097-1802-4c68-831e-2553a8b93362",
+        "timestamp": 1794317759211
+      },
+      {
+        "executionId": "dcef3d99-070d-4994-a120-a888f4d4ac57",
+        "chatSessionId": "sess_022eb097-1802-4c68-831e-2553a8b93362",
+        "timestamp": 1794318031633
+      }
+    ],
+    "3.3 Implement content hashing, idempotent ingestion, and quarantine": [
+      {
+        "executionId": "261efe70-d390-431b-af43-2feabbc77bbb",
+        "chatSessionId": "sess_7498ce24-3260-47b7-a934-dc0f2d4b3614",
+        "timestamp": 1794318087106
+      },
+      {
+        "executionId": "261efe70-d390-431b-af43-2feabbc77bbb",
+        "chatSessionId": "sess_7498ce24-3260-47b7-a934-dc0f2d4b3614",
+        "timestamp": 1794318269552
+      }
+    ],
+    "3.6 Implement snapshot manifest and snapshot diffing": [
+      {
+        "executionId": "16790ad3-617e-463d-844d-672dc9866f55",
+        "chatSessionId": "sess_e1245ab5-4fbb-42bb-8410-0a595d77b9ff",
+        "timestamp": 1794318306304
+      },
+      {
+        "executionId": "16790ad3-617e-463d-844d-672dc9866f55",
+        "chatSessionId": "sess_e1245ab5-4fbb-42bb-8410-0a595d77b9ff",
+        "timestamp": 1794318384437
+      }
+    ],
+    "3.8 Implement completeness checks and atomic publish gate": [
+      {
+        "executionId": "6a5d8d81-89af-4fff-8853-d01e58611c1e",
+        "chatSessionId": "sess_2ed575c6-ce93-4d23-a565-2c47cf9ed150",
+        "timestamp": 1794318418437
+      },
+      {
+        "executionId": "6a5d8d81-89af-4fff-8853-d01e58611c1e",
+        "chatSessionId": "sess_2ed575c6-ce93-4d23-a565-2c47cf9ed150",
+        "timestamp": 1794318575509
+      }
+    ],
+    "3. Normalization, content hashing, quarantine, and snapshot/manifest publish": [
+      {
+        "executionId": "6a5d8d81-89af-4fff-8853-d01e58611c1e",
+        "chatSessionId": "sess_2ed575c6-ce93-4d23-a565-2c47cf9ed150",
+        "timestamp": 1794318575634
+      }
+    ],
+    "4.1 Implement the Bedrock embedding client": [
+      {
+        "executionId": "02c81064-81a6-4e79-9b9a-bb1b13d19575",
+        "chatSessionId": "sess_e141ab25-294d-44fe-94aa-048fbd3bfe84",
+        "timestamp": 1794318609440
+      },
+      {
+        "executionId": "02c81064-81a6-4e79-9b9a-bb1b13d19575",
+        "chatSessionId": "sess_e141ab25-294d-44fe-94aa-048fbd3bfe84",
+        "timestamp": 1794318911357
+      }
+    ],
+    "4.2 Build the local BM25 and vector index": [
+      {
+        "executionId": "fbeb726a-432c-46df-9e86-c1264f448123",
+        "chatSessionId": "sess_a6b366bc-c8d4-4939-a61c-823498ffd511",
+        "timestamp": 1794318946470
+      },
+      {
+        "executionId": "fbeb726a-432c-46df-9e86-c1264f448123",
+        "chatSessionId": "sess_a6b366bc-c8d4-4939-a61c-823498ffd511",
+        "timestamp": 1794319172893
+      }
+    ],
+    "4.4 Implement the SQS embedding/index worker": [
+      {
+        "executionId": "9eac3cb9-6c0e-4cf5-b983-2916872addc4",
+        "chatSessionId": "sess_8da9e132-5f2f-4d18-a8e6-72668b13ce4a",
+        "timestamp": 1794319229943
+      },
+      {
+        "executionId": "9eac3cb9-6c0e-4cf5-b983-2916872addc4",
+        "chatSessionId": "sess_8da9e132-5f2f-4d18-a8e6-72668b13ce4a",
+        "timestamp": 1794319483351
+      }
+    ],
+    "4.5 Wire the sync workflow handlers": [
+      {
+        "executionId": "d42ae0f8-377f-4e62-82c6-522299526ba2",
+        "chatSessionId": "sess_139ae101-03c4-4e4c-af71-40314d87b0b4",
+        "timestamp": 1794319549584
+      },
+      {
+        "executionId": "d42ae0f8-377f-4e62-82c6-522299526ba2",
+        "chatSessionId": "sess_139ae101-03c4-4e4c-af71-40314d87b0b4",
+        "timestamp": 1794321018816
+      }
+    ],
+    "4. Indexer: embeddings, local BM25, and vector index": [
+      {
+        "executionId": "d42ae0f8-377f-4e62-82c6-522299526ba2",
+        "chatSessionId": "sess_139ae101-03c4-4e4c-af71-40314d87b0b4",
+        "timestamp": 1794321018982
+      }
+    ],
+    "5.1 Implement topic validation and normalization": [
+      {
+        "executionId": "1e74424f-74e1-4a4d-b5bf-a82ed156b74a",
+        "chatSessionId": "sess_bdbd6c4b-268c-4f60-af89-0bf6fa2cc819",
+        "timestamp": 1794321090046
+      },
+      {
+        "executionId": "1e74424f-74e1-4a4d-b5bf-a82ed156b74a",
+        "chatSessionId": "sess_bdbd6c4b-268c-4f60-af89-0bf6fa2cc819",
+        "timestamp": 1794322229861
+      }
+    ],
+    "5.3 Implement hybrid retrieval": [
+      {
+        "executionId": "fd0eab92-91c7-4951-969d-8921a8fd4826",
+        "chatSessionId": "sess_c1bea336-2314-435b-8a35-26017e667944",
+        "timestamp": 1794322274055
+      },
+      {
+        "executionId": "fd0eab92-91c7-4951-969d-8921a8fd4826",
+        "chatSessionId": "sess_c1bea336-2314-435b-8a35-26017e667944",
+        "timestamp": 1794322506857
+      }
+    ],
+    "5.5 Implement bridge scoring, hard gates, MMR rerank, no-match, and the novelty slider": [
+      {
+        "executionId": "d07a20f4-0e72-4418-8662-46f2bf84cd9f",
+        "chatSessionId": "sess_1b824c8b-0970-425b-8edd-cae1e2ff45ba",
+        "timestamp": 1794322598482
+      },
+      {
+        "executionId": "d07a20f4-0e72-4418-8662-46f2bf84cd9f",
+        "chatSessionId": "sess_1b824c8b-0970-425b-8edd-cae1e2ff45ba",
+        "timestamp": 1794322817976
+      }
+    ],
+    "5.9 Implement the graph builder": [
+      {
+        "executionId": "f3df2968-652c-4410-8ffd-71601378354a",
+        "chatSessionId": "sess_4ccbe0ca-c5e7-41c9-9fd3-0b61f62be4bc",
+        "timestamp": 1794322860035
+      },
+      {
+        "executionId": "f3df2968-652c-4410-8ffd-71601378354a",
+        "chatSessionId": "sess_4ccbe0ca-c5e7-41c9-9fd3-0b61f62be4bc",
+        "timestamp": 1794323088469
+      }
+    ],
+    "5. Discovery: hybrid retrieval, scoring, MMR, hard gates, no-match, novelty slider": [
+      {
+        "executionId": "f3df2968-652c-4410-8ffd-71601378354a",
+        "chatSessionId": "sess_4ccbe0ca-c5e7-41c9-9fd3-0b61f62be4bc",
+        "timestamp": 1794323088560
+      }
+    ],
+    "6.1 Implement the prompt builder and Bedrock text client": [
+      {
+        "executionId": "f70e634a-5061-4130-baef-bea1d15a4a9b",
+        "chatSessionId": "sess_29828e4b-9e22-4b1a-ae81-9ef5f3670b88",
+        "timestamp": 1794323128078
+      },
+      {
+        "executionId": "f70e634a-5061-4130-baef-bea1d15a4a9b",
+        "chatSessionId": "sess_29828e4b-9e22-4b1a-ae81-9ef5f3670b88",
+        "timestamp": 1794323296576
+      }
+    ],
+    "6.2 Implement the Explanation_Validator and deterministic template fallback": [
+      {
+        "executionId": "319dc0a6-8cc0-41de-81cb-70a3b0eb44cc",
+        "chatSessionId": "sess_2a2bf01b-a7ec-4612-a604-53efbc6fe12c",
+        "timestamp": 1794323330761
+      },
+      {
+        "executionId": "319dc0a6-8cc0-41de-81cb-70a3b0eb44cc",
+        "chatSessionId": "sess_2a2bf01b-a7ec-4612-a604-53efbc6fe12c",
+        "timestamp": 1794323466535
+      }
+    ],
+    "6.3 Implement the explanation orchestrator": [
+      {
+        "executionId": "1a66bd4f-c3ab-4b85-b1f0-007bf94ff05f",
+        "chatSessionId": "sess_467d42c9-8104-4944-a4a7-9e9084dc80a7",
+        "timestamp": 1794323573615
+      },
+      {
+        "executionId": "1a66bd4f-c3ab-4b85-b1f0-007bf94ff05f",
+        "chatSessionId": "sess_467d42c9-8104-4944-a4a7-9e9084dc80a7",
+        "timestamp": 1794324313907
+      }
+    ],
+    "6. Evidence-grounded explanation with validator and deterministic fallback": [
+      {
+        "executionId": "1a66bd4f-c3ab-4b85-b1f0-007bf94ff05f",
+        "chatSessionId": "sess_467d42c9-8104-4944-a4a7-9e9084dc80a7",
+        "timestamp": 1794324314243
+      }
+    ],
+    "7.1 Implement schedule conflict detection": [
+      {
+        "executionId": "83897ae0-716b-45c8-a5b6-0d9b6370f55f",
+        "chatSessionId": "sess_a335bf9e-cee0-4e75-9244-b9deca230718",
+        "timestamp": 1794324387030
+      },
+      {
+        "executionId": "83897ae0-716b-45c8-a5b6-0d9b6370f55f",
+        "chatSessionId": "sess_a335bf9e-cee0-4e75-9244-b9deca230718",
+        "timestamp": 1794324464761
+      }
+    ],
+    "7.3 Implement the quest planner": [
+      {
+        "executionId": "d023e455-1b9c-4170-9272-62799c3f46d5",
+        "chatSessionId": "sess_152d63f5-38ac-4bcc-8946-5640480a1ba5",
+        "timestamp": 1794324864848
+      },
+      {
+        "executionId": "d023e455-1b9c-4170-9272-62799c3f46d5",
+        "chatSessionId": "sess_152d63f5-38ac-4bcc-8946-5640480a1ba5",
+        "timestamp": 1794324960492
+      }
+    ],
+    "7. Quest planner with conflict detection": [
+      {
+        "executionId": "d023e455-1b9c-4170-9272-62799c3f46d5",
+        "chatSessionId": "sess_152d63f5-38ac-4bcc-8946-5640480a1ba5",
+        "timestamp": 1794324961050
+      }
+    ],
+    "8.1 Build the API handler framework": [
+      {
+        "executionId": "24f76a9e-b97a-40d3-927f-414153008bd2",
+        "chatSessionId": "sess_5ace904d-7c2d-409b-88e4-23de28ee1527",
+        "timestamp": 1794324989073
+      },
+      {
+        "executionId": "24f76a9e-b97a-40d3-927f-414153008bd2",
+        "chatSessionId": "sess_5ace904d-7c2d-409b-88e4-23de28ee1527",
+        "timestamp": 1794325158884
+      }
+    ],
+    "8.2 Implement events, status, and discover handlers": [
+      {
+        "executionId": "c43e7f3b-55d2-4591-aa21-fbf61897ebaa",
+        "chatSessionId": "sess_1aa68614-67b4-4c4b-a4bf-3e7e665db745",
+        "timestamp": 1794325198383
+      },
+      {
+        "executionId": "c43e7f3b-55d2-4591-aa21-fbf61897ebaa",
+        "chatSessionId": "sess_1aa68614-67b4-4c4b-a4bf-3e7e665db745",
+        "timestamp": 1794329100246
+      }
+    ],
+    "8.3 Implement the explain handler": [
+      {
+        "executionId": "78850858-fe80-49a1-85a5-42f2116fb82e",
+        "chatSessionId": "sess_d82150e7-32c6-4caa-980d-a946199003b7",
+        "timestamp": 1794329219743
+      },
+      {
+        "executionId": "78850858-fe80-49a1-85a5-42f2116fb82e",
+        "chatSessionId": "sess_d82150e7-32c6-4caa-980d-a946199003b7",
+        "timestamp": 1794330168518
+      }
+    ],
+    "8.4 Implement the quests handler": [
+      {
+        "executionId": "e2d80e82-dee4-46b2-bd29-34ead9150181",
+        "chatSessionId": "sess_ce866233-f45f-49ed-8950-963966ed483f",
+        "timestamp": 1794330275976
+      },
+      {
+        "executionId": "e2d80e82-dee4-46b2-bd29-34ead9150181",
+        "chatSessionId": "sess_ce866233-f45f-49ed-8950-963966ed483f",
+        "timestamp": 1794330497100
+      }
+    ],
+    "8.5 Implement feedback handlers": [
+      {
+        "executionId": "a421c35f-1ff4-4779-8fcf-170d8ca58f8a",
+        "chatSessionId": "sess_e6fbad6a-ab76-48ed-ad72-1a74a70b0168",
+        "timestamp": 1794330534871
+      },
+      {
+        "executionId": "a421c35f-1ff4-4779-8fcf-170d8ca58f8a",
+        "chatSessionId": "sess_e6fbad6a-ab76-48ed-ad72-1a74a70b0168",
+        "timestamp": 1794330681787
+      }
+    ],
+    "8.6 Implement the admin sync handler": [
+      {
+        "executionId": "531f0518-1bd7-49f8-a9b2-a767cc60e269",
+        "chatSessionId": "sess_0ac564da-3cd7-4b6c-beff-fa47b4d6cfc3",
+        "timestamp": 1794330732084
+      },
+      {
+        "executionId": "531f0518-1bd7-49f8-a9b2-a767cc60e269",
+        "chatSessionId": "sess_0ac564da-3cd7-4b6c-beff-fa47b4d6cfc3",
+        "timestamp": 1794330850504
+      }
+    ],
+    "8.7 Wire the route table and rate limiting configuration": [
+      {
+        "executionId": "23203ab2-ca2e-44fd-a6a3-d9dd0d681b0c",
+        "chatSessionId": "sess_aef25e41-d2d7-405b-a117-eca18a534a66",
+        "timestamp": 1794330904462
+      },
+      {
+        "executionId": "23203ab2-ca2e-44fd-a6a3-d9dd0d681b0c",
+        "chatSessionId": "sess_aef25e41-d2d7-405b-a117-eca18a534a66",
+        "timestamp": 1794331071454
+      }
+    ],
+    "8. API handlers: discover, explain, quests, feedback, status, admin sync": [
+      {
+        "executionId": "23203ab2-ca2e-44fd-a6a3-d9dd0d681b0c",
+        "chatSessionId": "sess_aef25e41-d2d7-405b-a117-eca18a534a66",
+        "timestamp": 1794331071656
+      }
+    ],
+    "9.1 Create the app shell, API client, and landing page": [
+      {
+        "executionId": "07cc89ec-3672-4259-91ff-2ab5497ac01e",
+        "chatSessionId": "sess_f02f754c-1b44-498d-a762-52fdbafb9ac5",
+        "timestamp": 1794331193774
+      },
+      {
+        "executionId": "07cc89ec-3672-4259-91ff-2ab5497ac01e",
+        "chatSessionId": "sess_f02f754c-1b44-498d-a762-52fdbafb9ac5",
+        "timestamp": 1794331834703
+      }
+    ],
+    "9.2 Build bridge result cards and detail drawer": [
+      {
+        "executionId": "bad04d22-7b23-45f1-bf2a-ac9655259215",
+        "chatSessionId": "sess_8b466cdc-d9c5-4e30-b022-f040db32b846",
+        "timestamp": 1794331963181
+      },
+      {
+        "executionId": "bad04d22-7b23-45f1-bf2a-ac9655259215",
+        "chatSessionId": "sess_8b466cdc-d9c5-4e30-b022-f040db32b846",
+        "timestamp": 1794332263580
+      }
+    ],
+    "9.3 Build the accessible graph with list fallback": [
+      {
+        "executionId": "c0cbe235-1d35-4f66-acd4-c2a64407cc22",
+        "chatSessionId": "sess_87b6fbf2-d5ed-40aa-a261-9551b05c3024",
+        "timestamp": 1794332357550
+      },
+      {
+        "executionId": "c0cbe235-1d35-4f66-acd4-c2a64407cc22",
+        "chatSessionId": "sess_87b6fbf2-d5ed-40aa-a261-9551b05c3024",
+        "timestamp": 1794332600497
+      }
+    ],
+    "9.4 Build the quest stepper": [
+      {
+        "executionId": "641121e9-ef50-4356-b80f-1c5c958e1091",
+        "chatSessionId": "sess_0ba22793-763a-4dd3-8e9d-6a5761c40ad0",
+        "timestamp": 1794332856509
+      },
+      {
+        "executionId": "641121e9-ef50-4356-b80f-1c5c958e1091",
+        "chatSessionId": "sess_0ba22793-763a-4dd3-8e9d-6a5761c40ad0",
+        "timestamp": 1794333035790
+      }
+    ],
+    "9.5 Build catalog status and feedback controls": [
+      {
+        "executionId": "1088053b-0d5d-4858-af6f-61fb9f3f95e0",
+        "chatSessionId": "sess_c81dffc8-6b38-4c21-9c01-f17c7ae84355",
+        "timestamp": 1794333055903
+      },
+      {
+        "executionId": "1088053b-0d5d-4858-af6f-61fb9f3f95e0",
+        "chatSessionId": "sess_c81dffc8-6b38-4c21-9c01-f17c7ae84355",
+        "timestamp": 1794333352581
+      }
+    ],
+    "9.6 Wire pages and the scripted demo path": [
+      {
+        "executionId": "8ea3ff51-0b90-48f2-8ce4-73b40bdfb7b7",
+        "chatSessionId": "sess_7d1fee16-2cb5-4fbe-8d36-59f0723b8173",
+        "timestamp": 1794333419261
+      },
+      {
+        "executionId": "8ea3ff51-0b90-48f2-8ce4-73b40bdfb7b7",
+        "chatSessionId": "sess_7d1fee16-2cb5-4fbe-8d36-59f0723b8173",
+        "timestamp": 1794333682247
+      }
+    ],
+    "9. React UI: landing, bridge cards, accessible graph with list fallback, quest stepper": [
+      {
+        "executionId": "8ea3ff51-0b90-48f2-8ce4-73b40bdfb7b7",
+        "chatSessionId": "sess_7d1fee16-2cb5-4fbe-8d36-59f0723b8173",
+        "timestamp": 1794333682471
+      }
+    ],
+    "10.1 Create CDK app and data stack": [
+      {
+        "executionId": "af15d30f-2821-4f86-b686-c98b2aaf1f23",
+        "chatSessionId": "sess_471bacbb-9d01-40ef-ad61-812098375138",
+        "timestamp": 1794333754277
+      },
+      {
+        "executionId": "af15d30f-2821-4f86-b686-c98b2aaf1f23",
+        "chatSessionId": "sess_471bacbb-9d01-40ef-ad61-812098375138",
+        "timestamp": 1794334518791
+      }
+    ],
+    "10.2 Create the ingestion stack": [
+      {
+        "executionId": "2853fc96-0c93-49db-ad9c-e99ab67ec284",
+        "chatSessionId": "sess_9bb5a525-639a-4342-9cf6-d7d31f26d6c4",
+        "timestamp": 1794334668947
+      },
+      {
+        "executionId": "2853fc96-0c93-49db-ad9c-e99ab67ec284",
+        "chatSessionId": "sess_9bb5a525-639a-4342-9cf6-d7d31f26d6c4",
+        "timestamp": 1794335655418
+      }
+    ],
+    "10.3 Create the API stack": [
+      {
+        "executionId": "09069dcc-daa6-4d25-a426-1f018c661197",
+        "chatSessionId": "sess_a304bcf0-da70-4bfd-82c0-c5ee2b40952f",
+        "timestamp": 1794335786327
+      },
+      {
+        "executionId": "09069dcc-daa6-4d25-a426-1f018c661197",
+        "chatSessionId": "sess_a304bcf0-da70-4bfd-82c0-c5ee2b40952f",
+        "timestamp": 1794336263483
+      }
+    ],
+    "10.4 Create the web hosting stack": [
+      {
+        "executionId": "77b7d29d-0b19-45b3-91a5-855dc67a056e",
+        "chatSessionId": "sess_2e371e71-e226-4907-932f-019ebb6bd326",
+        "timestamp": 1794336353748
+      },
+      {
+        "executionId": "77b7d29d-0b19-45b3-91a5-855dc67a056e",
+        "chatSessionId": "sess_2e371e71-e226-4907-932f-019ebb6bd326",
+        "timestamp": 1794336709574
+      }
+    ],
+    "10.5 Add observability, alarms, and budgets, and compose the stacks": [
+      {
+        "executionId": "0f01dbba-3071-407b-9d3a-3aa4f97373ea",
+        "chatSessionId": "sess_e56011d4-bf0e-458e-ac5a-c26650bdf8f5",
+        "timestamp": 1794336823527
+      },
+      {
+        "executionId": "0f01dbba-3071-407b-9d3a-3aa4f97373ea",
+        "chatSessionId": "sess_e56011d4-bf0e-458e-ac5a-c26650bdf8f5",
+        "timestamp": 1794337158282
+      }
+    ],
+    "10.7 Add the CI/CD workflow": [
+      {
+        "executionId": "393bad71-fa6c-4823-a249-6ffc99058198",
+        "chatSessionId": "sess_b0f77258-8167-4591-9009-03e99b898120",
+        "timestamp": 1794337217910
+      },
+      {
+        "executionId": "393bad71-fa6c-4823-a249-6ffc99058198",
+        "chatSessionId": "sess_b0f77258-8167-4591-9009-03e99b898120",
+        "timestamp": 1794337347315
+      }
+    ],
+    "10. CDK stacks with least-privilege IAM, alarms, and budgets": [
+      {
+        "executionId": "393bad71-fa6c-4823-a249-6ffc99058198",
+        "chatSessionId": "sess_b0f77258-8167-4591-9009-03e99b898120",
+        "timestamp": 1794337347501
+      }
+    ],
+    "11.1 Build the evaluation harness and golden cases in `packages/evaluation`": [
+      {
+        "executionId": "87f5622b-f2e6-4712-bc39-9f1bf5df8701",
+        "chatSessionId": "sess_d65d5394-5632-4206-9d30-6d757f96682e",
+        "timestamp": 1794369799130
+      },
+      {
+        "executionId": "87f5622b-f2e6-4712-bc39-9f1bf5df8701",
+        "chatSessionId": "sess_d65d5394-5632-4206-9d30-6d757f96682e",
+        "timestamp": 1794370363157
+      }
+    ],
+    "11.2 Create fixtures and the demo seed": [
+      {
+        "executionId": "7b6d9c7c-c71e-44ea-b285-4b7f8d4c1a3b",
+        "chatSessionId": "sess_9288593d-6db1-4bcc-a840-ba0e99fe957e",
+        "timestamp": 1794370395501
+      },
+      {
+        "executionId": "7b6d9c7c-c71e-44ea-b285-4b7f8d4c1a3b",
+        "chatSessionId": "sess_9288593d-6db1-4bcc-a840-ba0e99fe957e",
+        "timestamp": 1794370922499
+      }
+    ],
+    "11.4 Write the README": [
+      {
+        "executionId": "67c13d76-c7c5-44ec-8ffe-73c8cb2bab71",
+        "chatSessionId": "sess_283debe4-158f-4d27-9db3-adf2469b898f",
+        "timestamp": 1794371329953
+      },
+      {
+        "executionId": "67c13d76-c7c5-44ec-8ffe-73c8cb2bab71",
+        "chatSessionId": "sess_283debe4-158f-4d27-9db3-adf2469b898f",
+        "timestamp": 1794371499368
+      }
+    ],
+    "11. Evaluation set, fixtures, demo seed, and README": [
+      {
+        "executionId": "67c13d76-c7c5-44ec-8ffe-73c8cb2bab71",
+        "chatSessionId": "sess_283debe4-158f-4d27-9db3-adf2469b898f",
+        "timestamp": 1794371499660
+      }
+    ],
+    "12. Final checkpoint - Ensure all tests pass": [
+      {
+        "executionId": "56938c0b-83bd-4104-b7b6-e6faafcf48f3",
+        "chatSessionId": "sess_ec9f6724-e1f9-4b3c-9e99-1919788b9408",
+        "timestamp": 1794371787667
+      },
+      {
+        "executionId": "56938c0b-83bd-4104-b7b6-e6faafcf48f3",
+        "chatSessionId": "sess_ec9f6724-e1f9-4b3c-9e99-1919788b9408",
+        "timestamp": 1794372549346
+      }
+    ]
+  }
+}

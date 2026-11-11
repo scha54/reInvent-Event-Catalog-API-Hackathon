@@ -1,0 +1,7 @@
+﻿{
+  "message": "Sign in to continue",
+  "_fixture": {
+    "note": "Anonymous GET /v1/events/{eventId}/sessions. Response also carried a Bearer WWW-Authenticate challenge (via x-amzn-remapped-www-authenticate).",
+    "provenance": "live-observed"
+  }
+}

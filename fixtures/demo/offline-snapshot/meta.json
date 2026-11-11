@@ -1,0 +1,37 @@
+{
+  "formatVersion": 1,
+  "origin": "offline-sample",
+  "label": "OFFLINE SAMPLE DATA: sanitized, fictional sessions used when no live catalog is available. These are not live catalog results.",
+  "live": false,
+  "eventId": "sample-event",
+  "catalogVersion": "offline-sample-20260101T000000000Z",
+  "builtAt": "2026-01-01T00:00:00.000Z",
+  "embeddingModelVersion": "lexical-only",
+  "lexicalOnly": true,
+  "sessionCount": 14,
+  "quarantinedCount": 0,
+  "source": "fixtures/demo/sample-catalog.json",
+  "demoPairs": [
+    {
+      "id": "serverless-sustainability",
+      "expectation": "match",
+      "noMatch": false,
+      "bridgeCount": 7,
+      "ok": true
+    },
+    {
+      "id": "security-ai",
+      "expectation": "match",
+      "noMatch": false,
+      "bridgeCount": 7,
+      "ok": true
+    },
+    {
+      "id": "unsupported-pairing",
+      "expectation": "no-match",
+      "noMatch": true,
+      "bridgeCount": 0,
+      "ok": true
+    }
+  ]
+}

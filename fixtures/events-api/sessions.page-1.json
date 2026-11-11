@@ -1,0 +1,60 @@
+﻿{
+  "_fixture": {
+    "note": "Derived from the OpenAPI spec (api.awsevents.com/v1/openapi.json). Not live data. IDs, titles, tokens are invented.",
+    "provenance": "synthetic"
+  },
+  "nextToken": "syn-token-AAA/+=",
+  "items": [
+    {
+      "sessionTime": {
+        "date": "2026-12-01",
+        "time": "16:00",
+        "timezone": "America/Los_Angeles",
+        "length": "60"
+      },
+      "focusAreas": ["Data"],
+      "additionalActivities": [],
+      "type": "Chalk talk",
+      "isAllDaySession": false,
+      "room": "Room 101",
+      "isReservable": true,
+      "venue": "Synthetic Venue A",
+      "seatAvailability": "limited",
+      "services": ["Amazon Bedrock"],
+      "experiences": [],
+      "customerPersonas": ["Architect"],
+      "level": "300 - Advanced",
+      "title": "Synthetic: Building RAG with managed vector stores",
+      "segments": ["Enterprise"],
+      "tracks": ["Synthetic Track AI"],
+      "industries": ["Financial Services"],
+      "abstract": "Synthetic abstract about retrieval augmented generation.",
+      "speakers": [
+        {
+          "name": "Synthetic Speaker One"
+        }
+      ],
+      "sessionId": "SYN-0001",
+      "topics": ["Artificial Intelligence"],
+      "features": ["Interactive"],
+      "abbreviation": "SYN101",
+      "areasOfInterest": ["Generative AI"],
+      "roles": ["Data Scientist"]
+    },
+    {
+      "sessionId": "SYN-0002",
+      "level": "200 - Intermediate",
+      "sessionTime": {
+        "date": "2026-12-01",
+        "time": "09:30",
+        "length": "120"
+      },
+      "title": "Synthetic: Observability for event-driven systems",
+      "services": ["Amazon CloudWatch"],
+      "type": "Workshop",
+      "tracks": ["Synthetic Track Ops"],
+      "topics": ["Management and Governance"]
+    }
+  ],
+  "totalCount": 5
+}

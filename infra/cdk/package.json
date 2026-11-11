@@ -1,0 +1,21 @@
+{
+  "name": "@serendipity/infra-cdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "synth": "cdk synth",
+    "synth:dev": "cdk synth -c env=dev",
+    "synth:demo": "cdk synth -c env=demo"
+  },
+  "dependencies": {
+    "@serendipity/services-api": "0.0.0",
+    "aws-cdk-lib": "2.275.0",
+    "constructs": "10.8.1"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.1148.0",
+    "tsx": "4.23.15"
+  }
+}

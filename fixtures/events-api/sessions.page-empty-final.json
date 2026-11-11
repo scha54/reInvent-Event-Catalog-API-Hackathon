@@ -1,0 +1,9 @@
+﻿{
+  "_fixture": {
+    "note": "Derived from the OpenAPI spec (api.awsevents.com/v1/openapi.json). Not live data. IDs, titles, tokens are invented.",
+    "provenance": "synthetic"
+  },
+  "_note": "Edge case: last non-empty page carried a nextToken but the following page is empty and has no nextToken.",
+  "items": [],
+  "totalCount": 4
+}

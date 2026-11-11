@@ -1,0 +1,9 @@
+node_modules
+dist
+cdk.out
+coverage
+package-lock.json
+.kiro
+*.md
+
+fixtures/demo/offline-snapshot/

@@ -1,0 +1,28 @@
+﻿{
+  "_fixture": {
+    "note": "Derived from the OpenAPI spec (api.awsevents.com/v1/openapi.json). Not live data. IDs, titles, tokens are invented.",
+    "provenance": "synthetic"
+  },
+  "nextToken": "syn-token-BBB/+=",
+  "items": [
+    {
+      "sessionId": "SYN-0003",
+      "title": "Synthetic: Minimal record (required fields only)"
+    },
+    {
+      "sessionId": "SYN-0004",
+      "seatAvailability": "walkUp",
+      "title": "Synthetic: Walk-up keynote",
+      "sessionTime": {
+        "date": "2026-12-02",
+        "time": "08:30",
+        "length": "90"
+      },
+      "isAllDaySession": false,
+      "type": "Keynote",
+      "isReservable": false,
+      "venue": "Synthetic Venue B"
+    }
+  ],
+  "totalCount": 5
+}

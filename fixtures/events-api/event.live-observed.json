@@ -1,0 +1,22 @@
+﻿{
+  "event": {
+    "eventType": "AWS Global Summit",
+    "name": "re:Invent 2026",
+    "startDate": "2026-11-30T05:30:00.000-08:00",
+    "timezone": "America/Los_Angeles",
+    "supportedLanguageCodes": ["en-US"],
+    "endDate": "2026-12-04T23:59:00.000-08:00",
+    "timeFormat": "12 hour",
+    "isOnline": false,
+    "address": {
+      "city": "Las Vegas"
+    },
+    "authenticationRequired": true,
+    "eventId": "reinvent2026",
+    "timezoneAbbreviation": "PDT"
+  },
+  "_fixture": {
+    "note": "Anonymous GET /v1/events/{eventId} response, public metadata only. Event ID shown here is data, never hardcoded in code; read from config.",
+    "provenance": "live-observed"
+  }
+}

@@ -1,0 +1,300 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem 2rem;
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: Canvas;
+  padding: 0.5rem;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.inline {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-right: 1rem;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+.field input[type='text'] {
+  font: inherit;
+  padding: 0.6rem;
+}
+.field-error {
+  color: #b00020;
+  margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .field-error {
+    color: #ff8a80;
+  }
+}
+
+button {
+  font: inherit;
+  padding: 0.6rem 1rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+.examples {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.cards,
+.session-list,
+.notices,
+.evidence {
+  list-style: none;
+  padding: 0;
+}
+.card {
+  border: 1px solid GrayText;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  margin-top: 0;
+}
+.badge {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0 0.4rem;
+  margin-right: 0.5rem;
+}
+.notice,
+.status-box {
+  border-left: 6px double currentColor;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.score-row dd,
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.score-row dt {
+  min-width: 9rem;
+}
+.bar {
+  display: inline-block;
+  width: 8rem;
+  height: 0.6rem;
+  border: 1px solid currentColor;
+}
+.bar-fill {
+  display: block;
+  height: 100%;
+  background: currentColor;
+}
+.evidence blockquote {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 4px solid currentColor;
+}
+.evidence-source,
+.section-note {
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0.75rem;
+}
+.observed h3::before {
+  content: '?? ';
+}
+.inferred h3::before {
+  content: '?? ';
+}
+.inferred {
+  border-top: 2px dashed currentColor;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+}
+.drawer {
+  max-width: min(40rem, 100vw - 1rem);
+  width: 100%;
+  max-height: 90vh;
+  margin: 0 0 0 auto;
+  height: 100vh;
+  max-height: 100vh;
+  border: 0;
+  border-left: 2px solid currentColor;
+}
+.drawer::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.view-toggle button[aria-pressed='true'] {
+  font-weight: bold;
+  border-width: 3px;
+  text-decoration: underline;
+}
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.graph-scroll {
+  overflow: auto;
+  border: 1px solid GrayText;
+  max-height: 70vh;
+}
+.graph-svg {
+  display: block;
+  min-width: 100%;
+  color: CanvasText;
+}
+.graph-shape {
+  fill: Canvas;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.graph-node {
+  cursor: pointer;
+}
+.graph-node:focus-visible {
+  outline: none;
+}
+.graph-node:focus-visible .graph-shape,
+.graph-node:hover .graph-shape {
+  stroke: #1a73e8;
+  stroke-width: 5;
+}
+.graph-kind,
+.graph-label,
+.graph-edge-label {
+  fill: currentColor;
+  font-size: 11px;
+}
+.graph-edge-label {
+  paint-order: stroke;
+  stroke: Canvas;
+  stroke-width: 3px;
+}
+.graph-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.graph-table th,
+.graph-table td {
+  border: 1px solid GrayText;
+  padding: 0.4rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.quest-steps {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 3px solid currentColor;
+}
+.quest-step {
+  position: relative;
+  margin-bottom: 1.25rem;
+  padding-left: 0.75rem;
+}
+.quest-step-conflict {
+  border-left: 6px double currentColor;
+}
+.badge-unknown {
+  border-style: dashed;
+}
+.badge-conflict {
+  border-width: 3px;
+  font-weight: 700;
+}
+.quest-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.status-list {
+  margin: 0;
+}
+.status-row {
+  padding: 0.25rem 0 0.25rem 0.75rem;
+  border-left: 3px solid currentColor;
+}
+.status-warning {
+  border-left: 6px double currentColor;
+}
+.status-row dt {
+  font-weight: 600;
+}
+.status-row dd {
+  margin: 0;
+}
+.feedback-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.feedback-buttons button[aria-pressed='true'] {
+  border-width: 3px;
+  font-weight: 700;
+  text-decoration: underline;
+}

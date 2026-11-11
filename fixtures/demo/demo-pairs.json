@@ -1,0 +1,26 @@
+{
+  "_note": "Prevalidated demo topic pairs (FR-12 12.1). Ids and topics mirror apps/web/src/demo-examples.ts. The third pair is intentionally unsupported and must produce an honest no-match.",
+  "pairs": [
+    {
+      "id": "serverless-sustainability",
+      "label": "Serverless + Sustainability",
+      "topicA": "serverless",
+      "topicB": "sustainability",
+      "expectation": "match"
+    },
+    {
+      "id": "security-ai",
+      "label": "Security + AI",
+      "topicA": "security",
+      "topicB": "AI",
+      "expectation": "match"
+    },
+    {
+      "id": "unsupported-pairing",
+      "label": "Unsupported pairing (no match)",
+      "topicA": "medieval falconry",
+      "topicB": "quantum knitting",
+      "expectation": "no-match"
+    }
+  ]
+}
